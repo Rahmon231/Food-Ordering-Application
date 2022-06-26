@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "28419259832",
+    "project_id": "food-ordering-applicatio-94eee",
+    "storage_bucket": "food-ordering-applicatio-94eee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28419259832:android:447dda1c8c1885be1ca34d",
+        "android_client_info": {
+          "package_name": "com.lemzeeyyy.foodorderingapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28419259832-rk3v7a997fci4ifdbhf7sqk6fs90ra1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvAMhC8SKM6Q3Lt6mChVznp-EUZZ9P7Yw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28419259832-rk3v7a997fci4ifdbhf7sqk6fs90ra1p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,8 +1,10 @@
-package com.lemzeeyyy.foodorderingapplication;
+package com.lemzeeyyy.foodorderingapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.lemzeeyyy.foodorderingapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
