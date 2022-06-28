@@ -167,7 +167,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/category_view1"
+                    android:id="@+id/category_recview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"
@@ -188,7 +188,7 @@
                     android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
-                    app:layout_constraintTop_toBottomOf="@+id/category_view1" />
+                    app:layout_constraintTop_toBottomOf="@+id/category_recview" />
 
                 <TextView
                     android:id="@+id/textView16"
@@ -206,7 +206,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/popular_view2"
+                    android:id="@+id/recommended_recview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clipToPadding="false"

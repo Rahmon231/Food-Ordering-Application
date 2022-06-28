@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.lemzeeyyy.foodorderingapplication.Activity.ShowDetailsActivity;
 import com.lemzeeyyy.foodorderingapplication.Utils.FoodDomain;
 import com.lemzeeyyy.foodorderingapplication.R;
 import com.lemzeeyyy.foodorderingapplication.Utils.FoodDomain;
