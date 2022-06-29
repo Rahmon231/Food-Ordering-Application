@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.lemzeeyyy.foodorderingapplication.Activity.ShowDetailsActivity;
 import com.lemzeeyyy.foodorderingapplication.Utils.FoodDomain;
 import com.lemzeeyyy.foodorderingapplication.R;
 import com.lemzeeyyy.foodorderingapplication.Utils.FoodDomain;
@@ -47,7 +48,6 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             case 2:
                 picUrl = "pop_3";
                 break;
-
         }
         int drawableResourseId = holder.itemView.getContext().getResources()
                 .getIdentifier(picUrl,"drawable",
@@ -55,14 +55,11 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourseId)
                 .into(holder.pic);
-        holder.addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailsActivity.class);
-//                intent.putExtra("object",recFoodDomains.get(position));
-//                holder.itemView.getContext().startActivity(intent);
+        holder.addBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(holder.itemView.getContext(), ShowDetailsActivity.class);
+            intent.putExtra("object",recFoodDomains.get(position));
+            holder.itemView.getContext().startActivity(intent);
 
-            }
         });
 
 
