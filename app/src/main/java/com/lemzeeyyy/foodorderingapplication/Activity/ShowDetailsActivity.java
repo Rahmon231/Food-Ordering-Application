@@ -33,7 +33,8 @@ public class ShowDetailsActivity extends AppCompatActivity {
     public void getBundle(){
         object = (FoodDomain)getIntent().getSerializableExtra("object");
 
-        int drawableResId = this.getResources().getIdentifier(object.getPicture(),"drawable",this.getPackageName());
+        int drawableResId = this.getResources().getIdentifier(object.getPicture(),
+                "drawable",this.getPackageName());
         Glide.with(this)
                 .load(drawableResId)
                 .into(foodPic);
@@ -45,29 +46,21 @@ public class ShowDetailsActivity extends AppCompatActivity {
         starTxt.setText(object.getStar()+"");
         totalPrice.setText("$"+Math.round(numberOrder*object.getFee()));
         timeTxt.setText(object.getTime()+" minutes");
-        plusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                numberOrder = numberOrder + 1;
-                numberOfOrderTxt.setText(String.valueOf(numberOrder));
-                totalPrice.setText("$"+Math.round(numberOrder*object.getFee()));
-            }
+
+        plusBtn.setOnClickListener(view -> {
+            numberOrder = numberOrder + 1;
+            numberOfOrderTxt.setText(String.valueOf(numberOrder));
+            totalPrice.setText("$"+Math.round(numberOrder*object.getFee()));
         });
-        minusBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(numberOrder>1)
-                    numberOrder = numberOrder - 1;
-                numberOfOrderTxt.setText(String.valueOf(numberOrder));
-                totalPrice.setText("$"+Math.round(numberOrder*object.getFee()));
-            }
+
+        minusBtn.setOnClickListener(view -> {
+            if(numberOrder>1)
+                numberOrder = numberOrder - 1;
+            numberOfOrderTxt.setText(String.valueOf(numberOrder));
+            totalPrice.setText("$"+Math.round(numberOrder*object.getFee()));
         });
-        addToCartBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                object.setNumberInCart(numberOrder);
-            }
-        });
+
+        addToCartBtn.setOnClickListener(view -> object.setNumberInCart(numberOrder));
 
     }
     private void initView() {
